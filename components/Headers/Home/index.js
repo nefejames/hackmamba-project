@@ -17,7 +17,12 @@ export default function Header() {
 
   return (
     <Box borderBottom={1} borderStyle={"solid"} borderColor="gray.900">
-      <Flex minH={"60px"} py={{ base: 2 }} align={"center"}>
+      <Flex
+        minH={"60px"}
+        py={{ base: 2 }}
+        align={"center"}
+        justify="space-between"
+      >
         {/* nav content flex */}
         <Flex flex={{ base: 1 }} justify={{ base: "center" }}>
           <Logo />

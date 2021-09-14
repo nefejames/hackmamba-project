@@ -6,7 +6,7 @@ import Logo from "@svgs/Logo";
 
 export default function DashboardHeader() {
   const router = useRouter();
-  const { user, isLoading } = useUser();
+  // const { user, isLoading } = useUser();
 
   return (
     <Flex
@@ -26,13 +26,11 @@ export default function DashboardHeader() {
 
         <Spacer />
 
-        {user && (
+        {/* {user && (
           <Link href="/api/auth/logout">
             <Button>Logout</Button>
           </Link>
-        )}
-
-        <Spacer />
+        )} */}
       </Stack>
     </Flex>
   );
