@@ -42,8 +42,6 @@ export default function HomeNavbar() {
           direction={"row"}
           spacing={6}
         >
-          <ThemeToggle />
-
           {!isLoading && !user && (
             <NextLink href="/api/auth/login" passHref>
               <Button as="a">Sign In/Log in</Button>
