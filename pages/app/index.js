@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Center, Text } from "@chakra-ui/react";
+import { Center } from "@chakra-ui/react";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 import Dashboard from "@views/Dashboard/";
 

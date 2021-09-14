@@ -6,11 +6,10 @@ import {
   Spacer,
   Stack,
   Text,
-  useColorModeValue as mode,
 } from "@chakra-ui/react";
 
 export default function FullNavLink({ active, icon, href, name }) {
-  const activeColor = mode("brand.600", "white");
+  const activeColor = "white";
   const activeProps = {
     color: activeColor,
     borderRightColor: active && activeColor,

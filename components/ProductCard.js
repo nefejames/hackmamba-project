@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Box, Flex, Image, Badge, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, Image, Badge } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 
 export default function ProductCard({

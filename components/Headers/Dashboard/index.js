@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
 import { Flex, Spacer, Stack, Button, Link } from "@chakra-ui/react";
-import { Logo, SidebarToggleButton, ThemeToggleButton } from "./components";
+import SidebarToggleButton from "./components/SidebarToggleButton";
 import { useUser } from "@auth0/nextjs-auth0";
+import Logo from "@svgs/Logo";
 
 export default function Header() {
   const router = useRouter();
@@ -20,8 +21,8 @@ export default function Header() {
       top="0"
       zIndex="2"
     >
-      <Stack direction="row" w="full" alignItems="center" spacing={[0, , 8]}>
-        <Logo display={["none", , "flex"]} />
+      <Stack direction="row" w="full" alignItems="center" spacing="8">
+        <Logo />
         <SidebarToggleButton />
 
         <Spacer />
@@ -39,8 +40,6 @@ export default function Header() {
         )} */}
 
         <Spacer />
-
-        <ThemeToggleButton />
       </Stack>
     </Flex>
   );

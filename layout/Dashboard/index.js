@@ -1,7 +1,7 @@
 import { useMediaQuery, Box, Stack } from "@chakra-ui/react";
-import Header from "@components/DashboardHeader/";
+import Header from "@components/Headers/Dashboard/";
 import Page from "./Page";
-import { DesktopSidebar, MobileSidebar } from "@components/Navbars/Dashboard/";
+import { DesktopSidebar, MobileSidebar } from "@components/DashboardSidebar";
 
 export default function DashboardLayout({ children }) {
   const [isSmallScreen] = useMediaQuery("(max-width: 768px)");
