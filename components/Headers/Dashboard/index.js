@@ -6,11 +6,10 @@ import Logo from "@svgs/Logo";
 
 export default function DashboardHeader() {
   const router = useRouter();
-  // const { user, isLoading } = useUser();
+  const { user, isLoading } = useUser();
 
   return (
     <Flex
-      // layerStyle="card"
       // bg={useColorModeValue("#F9FAFB", "gray.600")}
       bg="gray.900"
       h="10vh"
@@ -27,17 +26,11 @@ export default function DashboardHeader() {
 
         <Spacer />
 
-        {/* {!isLoading && !user && (
-          <Link href="/api/auth/login">
-            <Button>Login to add your listing</Button>
-          </Link>
-        )} */}
-
-        {/* {user && (
+        {user && (
           <Link href="/api/auth/logout">
             <Button>Logout</Button>
           </Link>
-        )} */}
+        )}
 
         <Spacer />
       </Stack>
