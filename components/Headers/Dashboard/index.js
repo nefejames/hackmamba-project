@@ -4,7 +4,7 @@ import SidebarToggleButton from "./components/SidebarToggleButton";
 import { useUser } from "@auth0/nextjs-auth0";
 import Logo from "@svgs/Logo";
 
-export default function Header() {
+export default function DashboardHeader() {
   const router = useRouter();
   // const { user, isLoading } = useUser();
 
