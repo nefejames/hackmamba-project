@@ -4,7 +4,6 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
   IconButton,
 } from "@chakra-ui/react";
@@ -24,56 +23,18 @@ export default function Home() {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+            fontSize={["3xl", "4xl", "6xl"]}
           >
-            <Text as={"span"} color={"red.400"}>
-              The One-Stop
-            </Text>
-            <br />
-            <Text
-              as={"span"}
-              position={"relative"}
-              _after={{
-                content: "''",
-                width: "full",
-                height: "30%",
-                position: "absolute",
-                bottom: 1,
-                left: 0,
-                bg: "red.400",
-                zIndex: -1,
-              }}
-            >
-              PetShop
+            Get your perfect companion{" "}
+            <Text as={"span"} color={"blue.500"}>
+              today!
             </Text>
           </Heading>
-          <Text color={"gray.500"} fontSize={{ base: "md", lg: "lg" }}>
-            We recognize pets as important members of your family, and are
-            commited to helping you cater for their wellness.
+          <Text color={"gray.200"} fontSize={["lg"]}>
+            Buyng a pet is a big decision, and we are here to help you through
+            the process. It's time to add a new love to your family. Discover
+            the right pet for you. It's time to find your new best friend.
           </Text>
-          <Stack
-            spacing={{ base: 4, sm: 6 }}
-            direction={{ base: "column", sm: "row" }}
-          >
-            <Button
-              size={"md"}
-              fontWeight={"normal"}
-              px={6}
-              colorScheme={"red"}
-              bg={"red.400"}
-              _hover={{ bg: "red.500" }}
-            >
-              Get started
-            </Button>
-            <Button
-              size={"md"}
-              fontWeight={"normal"}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
-            >
-              How It Works
-            </Button>
-          </Stack>
         </Stack>
         <Flex
           flex={1}

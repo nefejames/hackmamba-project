@@ -13,7 +13,7 @@ const theme = extendTheme({ config });
 export default function Theme({ children }) {
   return (
     <ChakraProvider theme={theme}>
-      <Fonts />
+      {/* <Fonts /> */}
       {children}
     </ChakraProvider>
   );

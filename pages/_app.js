@@ -1,8 +1,9 @@
 import { UserProvider } from "@auth0/nextjs-auth0";
 import SidebarContextProvider from "@context/sidebarContext";
+import { ScaleFade } from "@chakra-ui/react";
 import Theme from "theme";
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <head>
@@ -29,11 +30,13 @@ function MyApp({ Component, pageProps }) {
       </head>
 
       <Theme>
-        <SidebarContextProvider>
-          <UserProvider>
-            <Component {...pageProps} />
-          </UserProvider>
-        </SidebarContextProvider>
+        <ScaleFade key={router.route} initialScale="0.9" in="true">
+          <SidebarContextProvider>
+            <UserProvider>
+              <Component {...pageProps} />
+            </UserProvider>
+          </SidebarContextProvider>
+        </ScaleFade>
       </Theme>
     </>
   );

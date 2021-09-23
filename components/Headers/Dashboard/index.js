@@ -1,12 +1,10 @@
-import { useRouter } from "next/router";
 import { Flex, Spacer, Stack, Button, Link } from "@chakra-ui/react";
 import SidebarToggleButton from "./components/SidebarToggleButton";
 import { useUser } from "@auth0/nextjs-auth0";
 import Logo from "@svgs/Logo";
 
 export default function DashboardHeader() {
-  const router = useRouter();
-  // const { user, isLoading } = useUser();
+  const { user } = useUser();
 
   return (
     <Flex
@@ -26,11 +24,11 @@ export default function DashboardHeader() {
 
         <Spacer />
 
-        {/* {user && (
+        {user && (
           <Link href="/api/auth/logout">
             <Button>Logout</Button>
           </Link>
-        )} */}
+        )}
       </Stack>
     </Flex>
   );
