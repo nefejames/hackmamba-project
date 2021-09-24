@@ -1,6 +1,6 @@
-import { Box, Flex, Badge, chakra } from "@chakra-ui/react";
+import { Box, Flex, Badge, Image, chakra } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
-import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
+import { Image as CloudinaryImage } from "cloudinary-react";
 const ChakraCloudinaryImage = chakra(CloudinaryImage);
 export default function ProductCard({ product, setModalData }) {
   const { img, beds, baths, title, price } = product;
