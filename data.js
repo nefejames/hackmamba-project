@@ -1,8 +1,3 @@
-const IMG =
-  "https://res.cloudinary.com/nefejames/image/upload/q_auto,f_auto,w_auto,c_thumb,g_auto,ar_4:3,c_fill/c_scale,w_auto/dpr_auto/Hackmamba/Images/pet7.jpg";
-
-const VIDEO =
-  "https://res.cloudinary.com/nefejames/video/upload/Hackmamba/Videos/pet4.mp4";
 const data = [
   {
     id: 1,
@@ -19,7 +14,7 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    img: "Hackmamba/Images/pet14.jpg",
+    img: "Hackmamba/Images/pet2.jpg",
     video: "/Hackmamba/Videos/pet2",
   },
   {
@@ -28,7 +23,7 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    img: "Hackmamba/Images/pet10.jpg",
+    img: "Hackmamba/Images/pet3.jpg",
     video: "/Hackmamba/Videos/pet3",
   },
   {
@@ -55,7 +50,7 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    img: "Hackmamba/Images/pet17.jpg",
+    img: "Hackmamba/Images/pet6.jpg",
     video: "/Hackmamba/Videos/pet6",
   },
   {
@@ -73,7 +68,7 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    img: "Hackmamba/Images/pet13.jpg",
+    img: "Hackmamba/Images/pet8.jpg",
     video: "/Hackmamba/Videos/pet8",
   },
   {
@@ -91,7 +86,7 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    img: "Hackmamba/Images/pet3.jpg",
+    img: "Hackmamba/Images/pet10.jpg",
     video: "/Hackmamba/Videos/pet10",
   },
 ];

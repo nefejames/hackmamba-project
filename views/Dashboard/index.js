@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, useDisclosure } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import ProductCard from "@components/ProductCard";
 import DashboardLayout from "@layout/Dashboard";
