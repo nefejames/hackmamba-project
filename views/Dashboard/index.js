@@ -1,14 +1,16 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Box, SimpleGrid, useDisclosure } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import ProductCard from "@components/ProductCard";
 import DashboardLayout from "@layout/Dashboard";
-import data from "../../data";
-import { cardVariant, parentVariant } from "../../motion";
+import data from "@root/data";
+import { cardVariant, parentVariant } from "@root/motion";
+import ModalProduct from "@components/ModalProduct";
+import { useState } from "react";
 const MotionSimpleGrid = motion(SimpleGrid);
 const MotionBox = motion(Box);
 
-// const MainCloudinaryUrl
 export default function Dashboard() {
+  const [modalData, setModalData] = useState(null);
   return (
     <DashboardLayout>
       <Box>
@@ -22,11 +24,20 @@ export default function Dashboard() {
           animate="animate"
         >
           {data.map((product) => (
-            <MotionBox variants={cardVariant} whileHover={{ scale: 1.1 }}>
-              <ProductCard key={product.id} {...product} />
+            <MotionBox variants={cardVariant}>
+              <ProductCard
+                key={product.id}
+                product={product}
+                setModalData={setModalData}
+              />
             </MotionBox>
           ))}
         </MotionSimpleGrid>
+        <ModalProduct
+          isOpen={modalData ? true : false}
+          onClose={() => setModalData(null)}
+          modalData={modalData}
+        />
       </Box>
     </DashboardLayout>
   );

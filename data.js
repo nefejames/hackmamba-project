@@ -1,5 +1,6 @@
 const IMG =
-  "https://res.cloudinary.com/nefejames/image/upload/q_auto,f_auto,w_auto,c_thumb,g_auto/Hackmamba/Images/pet7.jpg";
+  "https://res.cloudinary.com/nefejames/image/upload/q_auto,f_auto,w_auto,c_thumb,g_auto,ar_4:3,c_fill/c_scale,w_auto/dpr_auto/Hackmamba/Images/pet7.jpg";
+
 const data = [
   {
     id: 1,
@@ -8,8 +9,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 15,
     imgUrl: "",
     videoUrl: "",
   },
@@ -20,8 +19,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 7,
   },
   {
     id: 3,
@@ -30,8 +27,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 21,
   },
   {
     id: 4,
@@ -40,8 +35,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 5,
@@ -50,8 +43,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 6,
@@ -60,8 +51,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 7,
@@ -70,8 +59,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 8,
@@ -80,8 +67,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 9,
@@ -90,8 +75,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
   {
     id: 10,
@@ -100,8 +83,6 @@ const data = [
     baths: 4,
     title: "Ikoyi House",
     price: 250,
-    score: 2,
-    reviewCount: 9,
   },
 ];
 
