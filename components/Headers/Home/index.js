@@ -19,7 +19,11 @@ export default function HomeHeader() {
         borderColor="gray.900"
       >
         <Flex flex={{ base: 1 }} justify="start">
-          <Logo />
+          <NextLink href="/" rel="noopener noreferrer" target="_blank">
+            <a>
+              <Logo />
+            </a>
+          </NextLink>
         </Flex>
 
         {!isLoading && !user && (

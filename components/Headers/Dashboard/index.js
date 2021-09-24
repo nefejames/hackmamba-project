@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import { Flex, Spacer, Stack, Button, Link } from "@chakra-ui/react";
 import SidebarToggleButton from "./components/SidebarToggleButton";
 import { useUser } from "@auth0/nextjs-auth0";
@@ -19,7 +20,11 @@ export default function DashboardHeader() {
       zIndex="2"
     >
       <Stack direction="row" w="full" alignItems="center" spacing="8">
-        <Logo />
+        <NextLink href="/" rel="noopener noreferrer" target="_blank">
+          <a>
+            <Logo />
+          </a>
+        </NextLink>
         <SidebarToggleButton />
 
         <Spacer />
