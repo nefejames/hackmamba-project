@@ -2,6 +2,7 @@ import { UserProvider } from "@auth0/nextjs-auth0";
 import SidebarContextProvider from "@context/sidebarContext";
 import { ScaleFade } from "@chakra-ui/react";
 import Theme from "theme";
+import { CloudinaryContext } from "cloudinary-react";
 
 function MyApp({ Component, pageProps, router }) {
   return (
@@ -33,7 +34,9 @@ function MyApp({ Component, pageProps, router }) {
         <ScaleFade key={router.route} initialScale="0.9" in="true">
           <SidebarContextProvider>
             <UserProvider>
-              <Component {...pageProps} />
+              <CloudinaryContext cloudName="nefejames" secure="true">
+                <Component {...pageProps} />
+              </CloudinaryContext>
             </UserProvider>
           </SidebarContextProvider>
         </ScaleFade>

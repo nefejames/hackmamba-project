@@ -1,6 +1,5 @@
 import {
   Box,
-  Image,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -11,12 +10,11 @@ import {
   Button,
   useToast,
 } from "@chakra-ui/react";
+import { Video } from "cloudinary-react";
 
 export default function ModalProduct({ isOpen, onClose, modalData }) {
-  const { img, title, price } = modalData || {};
+  const { title, price, video } = modalData || {};
   const toast = useToast();
-
-  console.log(modalData);
 
   const handleModalClose = () => {
     toast({
@@ -36,17 +34,10 @@ export default function ModalProduct({ isOpen, onClose, modalData }) {
       <ModalOverlay />
       <ModalContent>
         <ModalCloseButton />
-        <ModalHeader>Product Details</ModalHeader>
+        <ModalHeader>Pet Details</ModalHeader>
         <ModalBody>
           <Box w="full" h="full">
-            <Image
-              src={img}
-              h={[40, 60, 80, 150, 300]}
-              w="full"
-              objectFit="cover"
-              roundedTop="lg"
-              placeholder="blur"
-            />
+            <Video controls publicId={video} />
 
             <Box pt="3">
               <Box
