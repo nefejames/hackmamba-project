@@ -9,7 +9,7 @@ import { IoHomeSharp } from "react-icons/io5";
 export default function Sidebar() {
   const router = useRouter();
   const { isOpen } = useSidebarAuth();
-  const NavAction = isOpen ? IconNavLink : FullNavLink;
+  const NavLink = isOpen ? IconNavLink : FullNavLink;
 
   return (
     <Stack
@@ -28,7 +28,7 @@ export default function Sidebar() {
       top="10vh"
       bg="gray.900"
     >
-      <NavAction
+      <NavLink
         active={router.pathname === "/"}
         name="Home"
         href="/"
