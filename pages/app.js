@@ -16,4 +16,4 @@ export default function App() {
   );
 }
 
-export const getServerSideProps = withPageAuthRequired();
+// export const getServerSideProps = withPageAuthRequired();
