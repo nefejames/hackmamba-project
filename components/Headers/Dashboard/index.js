@@ -9,7 +9,6 @@ export default function DashboardHeader() {
 
   return (
     <Flex
-      // bg={useColorModeValue("#F9FAFB", "gray.600")}
       bg="gray.900"
       h="10vh"
       minH="70px"
@@ -31,7 +30,7 @@ export default function DashboardHeader() {
 
         {user && (
           <Link href="/api/auth/logout">
-            <Button>Logout</Button>
+            <Button bg="blue.700" _hover={{ bg: "blue.900" }}>Logout</Button>
           </Link>
         )}
       </Stack>

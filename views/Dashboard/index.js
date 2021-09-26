@@ -24,12 +24,8 @@ export default function Dashboard() {
           animate="animate"
         >
           {data.map((product) => (
-            <MotionBox variants={cardVariant}>
-              <ProductCard
-                key={product.id}
-                product={product}
-                setModalData={setModalData}
-              />
+            <MotionBox variants={cardVariant} key={product.id}>
+              <ProductCard product={product} setModalData={setModalData} />
             </MotionBox>
           ))}
         </MotionSimpleGrid>

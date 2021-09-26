@@ -5,12 +5,10 @@ import IconNavLink from "./IconNavLink";
 import { useSidebarAuth } from "@context/sidebarContext";
 import { RiAdminFill } from "react-icons/ri";
 import { IoHomeSharp } from "react-icons/io5";
-import { useUser } from "@auth0/nextjs-auth0";
 
 export default function Sidebar() {
   const router = useRouter();
   const { isOpen } = useSidebarAuth();
-  const { user } = useUser();
   const NavAction = isOpen ? IconNavLink : FullNavLink;
 
   return (
@@ -36,15 +34,6 @@ export default function Sidebar() {
         href="/"
         icon={IoHomeSharp}
       />
-
-      {user && (
-        <NavAction
-          active={router.pathname === "/app"}
-          name="Dashboard"
-          href="/app"
-          icon={RiAdminFill}
-        />
-      )}
     </Stack>
   );
 }

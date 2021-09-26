@@ -1,7 +1,11 @@
-import { Box, Flex, Badge, Image, chakra } from "@chakra-ui/react";
+import Image from "next/image";
+import { Box, Flex, Badge, chakra } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
-import { Image as CloudinaryImage } from "cloudinary-react";
+import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
+
 const ChakraCloudinaryImage = chakra(CloudinaryImage);
+const ChakraNextImage = chakra(Image);
+
 export default function ProductCard({ product, setModalData }) {
   const { img, beds, baths, title, price } = product;
   const score = Math.floor(Math.random(5) * 5);
@@ -20,43 +24,37 @@ export default function ProductCard({ product, setModalData }) {
         w="full"
         h="full"
         borderWidth="1px"
-        rounded="lg"
+        rounded="xl"
         shadow="lg"
         onClick={() => setModalData(product)}
       >
-        {/* <Image
-          src={img}
-          h={[40, 60, 80, 150, 200]}
-          w="full"
-          objectFit="cover"
+        <Box
+          w="100%"
+          height="200px"
+          position="relative"
+          overflow="hidden"
           roundedTop="lg"
-          placeholder="blur"
-        /> */}
-        <CloudinaryImage
+        >
+          <Image
+            src={img}
+            objectFit="cover"
+            alt="picture of an animal"
+            layout="fill"
+            objectFit="cover"
+          />
+        </Box>
+
+        {/* <CloudinaryImage
           alt="picture of an animal"
           responsive
           publicId={img}
-          loading="lazy"
-          quality="auto"
-        />
+          loading="lazy"     
+        >
+        <Transformation quality={200} width="200" height="200"/>
+        </CloudinaryImage>
+         */}
 
         <Box p="6">
-          <Box d="flex" alignItems="baseline">
-            <Badge rounded="full" px="2" colorScheme="teal">
-              New
-            </Badge>
-            <Box
-              color="gray.500"
-              fontWeight="semibold"
-              letterSpacing="wide"
-              fontSize="xs"
-              textTransform="uppercase"
-              ml="2"
-            >
-              {beds} beds &bull; {baths} baths
-            </Box>
-          </Box>
-
           <Box
             mt="3"
             fontWeight="semibold"
@@ -67,13 +65,7 @@ export default function ProductCard({ product, setModalData }) {
             {title}
           </Box>
 
-          <Box>
-            ${price}
-            <Box as="span" color="gray.600" fontSize="sm">
-              {" "}
-              / month
-            </Box>
-          </Box>
+          <Box>${price}</Box>
 
           <Box d="flex" mt="3" alignItems="center">
             {Array(5)

@@ -1,11 +1,4 @@
-import {
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Image,
-} from "@chakra-ui/react";
+import { Stack, Flex, Box, Heading, Text, Image } from "@chakra-ui/react";
 import HomeLayout from "@layout/Home";
 
 export default function Home() {
@@ -55,7 +48,7 @@ export default function Home() {
               align="center"
               w="100%"
               h="100%"
-              src=" https://res.cloudinary.com/nefejames/image/upload/q_auto,f_auto,w_auto/v1632501665/Hackmamba/Images/hero.jpg"
+              src="https://res.cloudinary.com/nefejames/image/upload/q_auto,f_auto,w_auto/v1632501665/Hackmamba/Images/hero.jpg"
             />
           </Box>
         </Flex>

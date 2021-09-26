@@ -50,10 +50,6 @@ export default function ModalProduct({ isOpen, onClose, modalData }) {
                 {title}
               </Box>
               ${price}
-              <Box as="span" color="gray.600" fontSize="sm">
-                {" "}
-                / month
-              </Box>
             </Box>
           </Box>
         </ModalBody>

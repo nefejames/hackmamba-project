@@ -12,16 +12,12 @@ import {
 import FullNavLink from "./FullNavLink";
 import { RiAdminFill } from "react-icons/ri";
 import { IoHomeSharp } from "react-icons/io5";
-
-import { useUser } from "@auth0/nextjs-auth0";
-
 import { useSidebarAuth } from "@context/sidebarContext";
 
 export default function MobileSidebar() {
   const router = useRouter();
   const { isOpen, onClose } = useSidebarAuth();
-  const { user } = useUser();
-
+  
   useEffect(() => {
     router.events.on("routeChangeComplete", onClose);
     return () => {
@@ -40,14 +36,7 @@ export default function MobileSidebar() {
               href="/"
               icon={IoHomeSharp}
             />
-            {user && (
-              <FullNavLink
-                active={router.pathname === "/app"}
-                name="Dashboard"
-                href="/app"
-                icon={RiAdminFill}
-              />
-            )}
+           
           </Stack>
         </DrawerContent>
       </DrawerOverlay>
