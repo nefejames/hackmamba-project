@@ -1,13 +1,9 @@
 import Image from "next/image";
-import { Box, Flex, Badge, chakra } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
-import { Image as CloudinaryImage, Transformation } from "cloudinary-react";
-
-const ChakraCloudinaryImage = chakra(CloudinaryImage);
-const ChakraNextImage = chakra(Image);
 
 export default function ProductCard({ product, setModalData }) {
-  const { img, beds, baths, title, price } = product;
+  const { img, title, price } = product;
   const score = Math.floor(Math.random(5) * 5);
   const reviewCount = Math.floor(Math.random(50) * 50);
 
@@ -43,16 +39,6 @@ export default function ProductCard({ product, setModalData }) {
             objectFit="cover"
           />
         </Box>
-
-        {/* <CloudinaryImage
-          alt="picture of an animal"
-          responsive
-          publicId={img}
-          loading="lazy"     
-        >
-        <Transformation quality={200} width="200" height="200"/>
-        </CloudinaryImage>
-         */}
 
         <Box p="6">
           <Box
