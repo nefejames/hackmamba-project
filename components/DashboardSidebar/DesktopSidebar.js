@@ -3,7 +3,6 @@ import { Stack } from "@chakra-ui/react";
 import FullNavLink from "./FullNavLink";
 import IconNavLink from "./IconNavLink";
 import { useSidebarAuth } from "@context/sidebarContext";
-import { RiAdminFill } from "react-icons/ri";
 import { IoHomeSharp } from "react-icons/io5";
 
 export default function Sidebar() {
@@ -13,7 +12,6 @@ export default function Sidebar() {
 
   return (
     <Stack
-      layerStyle="card"
       w={isOpen ? "60px" : "300px"}
       transition="width .4s ease-in-out"
       py={8}

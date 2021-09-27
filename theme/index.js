@@ -1,7 +1,4 @@
 import { extendTheme, ChakraProvider } from "@chakra-ui/react";
-import { overrides } from "./overrides";
-import Fonts from "./foundations/fonts";
-// const theme = extendTheme(overrides);
 
 const config = {
   initialColorMode: "dark",
@@ -11,10 +8,5 @@ const config = {
 const theme = extendTheme({ config });
 
 export default function Theme({ children }) {
-  return (
-    <ChakraProvider theme={theme}>
-      {/* <Fonts /> */}
-      {children}
-    </ChakraProvider>
-  );
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>;
 }

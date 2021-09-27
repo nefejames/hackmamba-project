@@ -23,8 +23,8 @@ export default function Dashboard() {
           initial="initial"
           animate="animate"
         >
-          {data.map((product) => (
-            <MotionBox variants={cardVariant} key={product.id}>
+          {data.map((product, i) => (
+            <MotionBox variants={cardVariant} key={i}>
               <ProductCard product={product} setModalData={setModalData} />
             </MotionBox>
           ))}

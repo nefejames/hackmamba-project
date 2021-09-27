@@ -17,7 +17,7 @@ import { useSidebarAuth } from "@context/sidebarContext";
 export default function MobileSidebar() {
   const router = useRouter();
   const { isOpen, onClose } = useSidebarAuth();
-  
+
   useEffect(() => {
     router.events.on("routeChangeComplete", onClose);
     return () => {
@@ -27,7 +27,7 @@ export default function MobileSidebar() {
   return (
     <Drawer isOpen={isOpen} onClose={onClose} placement="left">
       <DrawerOverlay display={["initial", , "none"]}>
-        <DrawerContent layerStyle="neutral" py={12} bg="gray.900">
+        <DrawerContent py={12} bg="gray.900">
           <Stack spacing={2} fontSize="sm">
             <DrawerCloseButton />
             <FullNavLink
@@ -36,7 +36,6 @@ export default function MobileSidebar() {
               href="/"
               icon={IoHomeSharp}
             />
-           
           </Stack>
         </DrawerContent>
       </DrawerOverlay>

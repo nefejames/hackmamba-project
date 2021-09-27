@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { UserProvider } from "@auth0/nextjs-auth0";
 import SidebarContextProvider from "@context/sidebarContext";
 import { ScaleFade } from "@chakra-ui/react";
@@ -7,7 +8,7 @@ import { CloudinaryContext } from "cloudinary-react";
 function MyApp({ Component, pageProps, router }) {
   return (
     <>
-      <head>
+      <Head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -28,7 +29,7 @@ function MyApp({ Component, pageProps, router }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
-      </head>
+      </Head>
 
       <Theme>
         <ScaleFade key={router.route} initialScale="0.9" in="true">

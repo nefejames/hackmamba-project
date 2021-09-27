@@ -9,7 +9,6 @@ export default function ProductCard({ product, setModalData }) {
 
   return (
     <Flex
-      layerStyle="card"
       w="full"
       h="full"
       alignItems="center"
