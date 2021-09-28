@@ -36,7 +36,7 @@ export default function ModalProduct({ isOpen, onClose, modalData }) {
         <ModalCloseButton />
         <ModalHeader>Pet Details</ModalHeader>
         <ModalBody>
-          <Box w="full" h="full">
+          <Box w="full" maxH="400px">
             <Video controls publicId={video} width="100%" />
 
             <Box pt="3">
